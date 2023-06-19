@@ -29,7 +29,7 @@ import {
 } from "react-financial-charts";
 import { initialData } from "./data";
 
-function App() {
+const App = () => {
   const ScaleProvider = discontinuousTimeScaleProviderBuilder().inputDateAccessor(
     (d) => new Date(d.date)
   );
@@ -206,4 +206,4 @@ function App() {
   );
 };
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("container"));
